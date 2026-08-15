@@ -1,0 +1,32 @@
+Sample Run 1 — Valid patient
+
+---- Outpatient Vital Signs Risk Flagger ----
+Name: John
+Age: 30
+Temperature: 38.5
+Oxygen saturation: 94
+Heart rate: 90
+Diabetes: False
+
+Has fever: True
+Low oxygen: True
+High heart rate: False
+
+Risk score: 2
+Needs urgent review: False
+
+
+
+
+
+Sample Run 2 — Invalid patient
+
+---- Outpatient Vital Signs Risk Flagger ----
+Name: John
+Age: -30
+Temperature: 38.5
+Oxygen saturation: 94
+Heart rate: 90
+Diabetes: False
+Invalid age!
+Cannot continue!
