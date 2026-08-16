@@ -56,7 +56,7 @@ high_heart_rate = False
 # initialize risk score
 risk_score = 0
 
-# Validation
+# Final Validation
 if is_age_valid and is_temperature_valid and is_oxygen_saturation_valid and is_heart_rate_valid:
     
     # Calculation of the risk score
