@@ -2,10 +2,10 @@
 # Outpatient Vital Signs Risk Flagger
 
 
-# Structure: 1 raw patient data → 2 Validation -> 3 derived boolean flags → 4 risk score → 5 urgent decision
+# Structure: patient data → Validation -> derived boolean flags based on patient → risk score → urgent decision
 
 
-# 1 raw patient data
+# patient data
 patient_name = "John"
 patient_age = -30
 temperature = 38.5
@@ -21,7 +21,7 @@ print("Oxygen saturation:", oxygen_saturation)
 print("Heart rate:", heart_rate)
 print("Diabetes:", has_diabetes)
 
-# 2 Validation
+# Validation
 is_age_valid = True
 is_temperature_valid = True
 is_oxygen_saturation_valid = True
@@ -47,13 +47,13 @@ if heart_rate < 50 or heart_rate > 200:
     print("Invalid heart rate!")
 
 
-# 3 derived boolean flags
+# derived boolean flags based on patient
 has_fever = False
 low_oxygen = False
 high_heart_rate = False
 
 
-# 4 risk score
+# initialize risk score
 risk_score = 0
 
 # Validation
@@ -83,10 +83,10 @@ if is_age_valid and is_temperature_valid and is_oxygen_saturation_valid and is_h
     if patient_age > 60:
         risk_score += 1
 
-    # 5 urgent decision
+    # urgent decision
     needs_urgent_review = False
 
-    if risk_score >= 4:
+    if risk_score >= 3:
         needs_urgent_review = True
 
     print("Has fever:", has_fever)
