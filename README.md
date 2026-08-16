@@ -6,3 +6,4 @@ A collection of healthcare-focused Python projects built while developing strong
 
 ### 1. Outpatient Vital Signs Risk Flagger
 A Python healthcare screening prototype that validates outpatient vital signs and flags patients for urgent review using simple rule-based logic.
+[View project](./outpatient-vital-signs-risk-flagger)
