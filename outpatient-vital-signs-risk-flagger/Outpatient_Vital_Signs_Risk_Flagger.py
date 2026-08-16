@@ -47,7 +47,7 @@ if heart_rate < 50 or heart_rate > 200:
     print("Invalid heart rate!")
 
 
-# derived boolean flags based on patient
+# Details about this patient
 has_fever = False
 low_oxygen = False
 high_heart_rate = False
@@ -58,7 +58,8 @@ risk_score = 0
 
 # Validation
 if is_age_valid and is_temperature_valid and is_oxygen_saturation_valid and is_heart_rate_valid:
-
+    
+    # Calculation of the risk score
     if temperature >= 38:
         has_fever = True
         print("Patient has fever of", temp)
