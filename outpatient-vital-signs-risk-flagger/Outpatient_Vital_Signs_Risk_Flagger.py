@@ -61,26 +61,28 @@ if is_age_valid and is_temperature_valid and is_oxygen_saturation_valid and is_h
 
     if temperature >= 38:
         has_fever = True
+        print("Patient has fever of", temp)
+        risk_score += 1
+        
 
     if oxygen_saturation < 97:
         low_oxygen = True
+        print("Patient has low O2 saturation of:", oxygen_sat)
+        risk_score += 1
+
 
     if heart_rate > 120:
         high_heart_rate = True
-
-    if has_fever:
+        print("Patient has high heart rate of:", heart_rate)
         risk_score += 1
 
-    if low_oxygen:
-        risk_score += 1
-
-    if high_heart_rate:
-        risk_score += 1
 
     if has_diabetes:
+        print("Patient has diabetes")
         risk_score += 1
 
     if patient_age > 60:
+        print("Elderly patient age:", age)
         risk_score += 1
 
     # urgent decision
@@ -96,4 +98,4 @@ if is_age_valid and is_temperature_valid and is_oxygen_saturation_valid and is_h
     print("Needs urgent review:", needs_urgent_review)
 
 else:
-    print("Cannot continue!")
+    print("Invalid values entered, cannot do risk score calculation!")
