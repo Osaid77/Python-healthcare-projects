@@ -1,32 +1,29 @@
 Sample Run 1 — Valid patient
 
----- Outpatient Vital Signs Risk Flagger ----
-Name: John
-Age: 30
+Enter name: Osaid
+Enter age: 65
+Enter temperature: 38.5
+Enter oxygen saturation: 88
+Enter heart rate: 105
+Does the patient have diabetes? (yes/no): yes
+
+-----Patient Assessment-----
+Name: Osaid
+Age: 65
 Temperature: 38.5
-Oxygen saturation: 94
-Heart rate: 90
-Diabetes: False
-
-Has fever: True
-Low oxygen: True
-High heart rate: False
-
-Risk score: 2
-Needs urgent review: False
-
-
+Oxygen saturation: 88
+Heart rate: 105
+Diabetes: True
+Patient has fever with temperature of 38.5
+Patient has hypoxemia with an oxygen level of 88
+Patient is tachycardic with heart rate of 105
+Risk score: 5
+Risk level: High risk
+Needs urgent review: True
+Patient needs urgent review!
 
 
-
-Sample Run 2 — Invalid patient
-
----- Outpatient Vital Signs Risk Flagger ----
-Name: John
-Age: -30
-Temperature: 38.5
-Oxygen saturation: 94
-Heart rate: 90
-Diabetes: False
-Invalid age!
-Cannot continue!
+Sample run2 - Invalid patient:
+Enter age: -30
+Invalid input. Try again!
+Enter age: 30
