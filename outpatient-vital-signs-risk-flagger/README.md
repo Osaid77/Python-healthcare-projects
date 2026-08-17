@@ -2,28 +2,32 @@
 Outpatient Vital Signs Risk Flagger
 
 2. One-sentence summary:
-A Python healthcare screening prototype that validates outpatient vital signs and flags patients for urgent review using simple rule-based logic.
+A Python healthcare screening prototype that validates patient vital signs and flags patients for urgent review using simple rule-based logic.
 
 3. Use case:
-outpatient triage & clinic intake screening
+outpatient and emergency triage & clinic intake screening
 
 4. Features:
+- Interactive patient data entry
+- Automatic retry after invalid values
+- Diabetes yes/no validation
 - stores patient demographic and vital-sign data
 - validates input ranges
 - derives fever / oxygen / heart-rate flags
-- calculates a simple risk score
+- calculates a risk score: Low / Moderate / High risk classification
 - determines whether urgent review is needed
 
 5. Technologies / concepts used:
 - Python
 - variables and data types
 - conditionals
+- loops
 - boolean logic
 - input validation
 - rule-based scoring
 
 6. Example input/output:
-Patient aged 30 with high temperature of 38.5, low O2 saturation of 94, normal heart rate of 90, has no diabetes,
+Patient aged 30 with high temperature of 38.5, low O2 saturation of < 94, normal heart rate of 78, has no diabetes,
 only has 2 flags which are temperature and O2 saturation, this gives him/her risk score of 2. 
 
 7. Real-world healthcare relevance:
