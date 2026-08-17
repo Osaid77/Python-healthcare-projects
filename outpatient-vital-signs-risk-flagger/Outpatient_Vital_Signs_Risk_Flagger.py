@@ -1,102 +1,113 @@
+# Input and validation of patient data
 
-# Outpatient Vital Signs Risk Flagger
+patient_name = input("Enter name: ")
 
+age = int(input("Enter age: "))
+is_age_valid = 1 <= age <= 130
+while not is_age_valid:
+    print("Invalid input. Try again!")
 
-# Structure: patient data → Validation -> derived boolean flags based on patient → risk score → urgent decision
-
-
-# patient data
-patient_name = "John"
-patient_age = -30
-temperature = 38.5
-oxygen_saturation = 94
-heart_rate = 90
-has_diabetes = False
-
-print("---- Outpatient Vital Signs Risk Flagger ----")
-print("Name:", patient_name)
-print("Age:", patient_age)
-print("Temperature:", temperature)
-print("Oxygen saturation:", oxygen_saturation)
-print("Heart rate:", heart_rate)
-print("Diabetes:", has_diabetes)
-
-# Validation
-is_age_valid = True
-is_temperature_valid = True
-is_oxygen_saturation_valid = True
-is_heart_rate_valid = True
-
-if patient_age < 1 or patient_age > 130:
-    is_age_valid = False
-    print("Invalid age!")
+    age = int(input("Enter age: "))
+    is_age_valid = 1 <= age <= 130
 
 
-if temperature < 33 or temperature > 42:
-    is_temperature_valid = False
-    print("Invalid temperature!")
+temp = float(input("Enter temperature: "))
+is_temp_valid = 33 <= temp <= 42
+while not is_temp_valid:
+    print("Invalid input. Try again!")
+
+    temp = float(input("Enter temperature: "))
+    is_temp_valid = 33 <= temp <= 42
 
 
-if oxygen_saturation < 50 or oxygen_saturation > 100:
-    is_oxygen_saturation_valid = False
-    print("Invalid oxygen saturation!")
+oxygen_sat = int(input("Enter oxygen saturation: "))
+is_oxygen_sat_valid = 50 <= oxygen_sat <= 100
+while not is_oxygen_sat_valid:
+    print("Invalid input. Try again!")
+
+    oxygen_sat = int(input("Enter oxygen saturation: "))
+    is_oxygen_sat_valid = 50 <= oxygen_sat <= 100
 
 
-if heart_rate < 50 or heart_rate > 200:
-    is_heart_rate_valid = False
-    print("Invalid heart rate!")
+heart_rate = int(input("Enter heart rate: "))
+is_heart_rate_valid = 50 <= heart_rate <= 200
+while not is_heart_rate_valid:
+    print("Invalid input. Try again!")
+
+    heart_rate = int(input("Enter heart rate: "))
+    is_heart_rate_valid = 50 <= heart_rate <= 200
 
 
-# Details about this patient
-has_fever = False
-low_oxygen = False
-high_heart_rate = False
+has_dm = input("Does the patient have diabetes? (yes/no): ")
+
+while has_dm != "yes" and has_dm != "no":
+    print("Invalid input. Try again!")
+    has_dm = input("Does the patient have diabetes? (yes/no): ")
+
+if has_dm == "yes":
+    has_dm = True
+
+elif has_dm == "no":
+    has_dm = False
 
 
-# initialize risk score
+# Risk score calculation
 risk_score = 0
 
-# Final Validation
-if is_age_valid and is_temperature_valid and is_oxygen_saturation_valid and is_heart_rate_valid:
-    
-    # Calculation of the risk score
-    if temperature >= 38:
-        has_fever = True
-        print("Patient has fever of", temp)
-        risk_score += 1
-        
+if age >= 60:
+    risk_score += 1
 
-    if oxygen_saturation < 97:
-        low_oxygen = True
-        print("Patient has low O2 saturation of:", oxygen_sat)
-        risk_score += 1
+if temp >= 38:
+    risk_score += 1
 
+if oxygen_sat < 90:
+    risk_score += 1
 
-    if heart_rate > 120:
-        high_heart_rate = True
-        print("Patient has high heart rate of:", heart_rate)
-        risk_score += 1
+if heart_rate >= 90:
+    risk_score += 1
+
+if has_dm:
+    risk_score += 1
 
 
-    if has_diabetes:
-        print("Patient has diabetes")
-        risk_score += 1
+# risk level calculation
+risk_level = 0
+if risk_score >= 4:
+    risk_level = "High risk"
 
-    if patient_age > 60:
-        print("Elderly patient age:", age)
-        risk_score += 1
-
-    # urgent decision
-    needs_urgent_review = False
-
-    if risk_score >= 3:
-        needs_urgent_review = True
-
-    print("Has fever:", has_fever)
-    print("Low oxygen:", low_oxygen)
-    print("High heart rate:", high_heart_rate)
-    print("Risk score:", risk_score)
-    print("Needs urgent review:", needs_urgent_review)
+elif risk_score >= 2:
+    risk_level = "Moderate risk"
 
 else:
-    print("Invalid values entered, cannot do risk score calculation!")
+    risk_level = "Low risk"
+
+needs_urgent_review = False
+
+if risk_level == "High risk":
+    needs_urgent_review = True
+
+
+# Output all information
+print("-----Patient Assessment-----")
+print("Name:", patient_name)
+print("Age:", age)
+print("Temperature:", temp)
+print("Oxygen saturation:", oxygen_sat)
+print("Heart rate:", heart_rate)
+print("Diabetes:", has_dm)
+
+if temp >= 38:
+    print(f"Patient has fever with temperature of {temp}")
+
+if oxygen_sat < 90:
+    print(f"Patient has hypoxemia with an oxygen level of {oxygen_sat}")
+
+if heart_rate >= 90:
+    print(f"Patient is tachycardic with heart rate of {heart_rate}")
+
+print("Risk score:", risk_score)
+print("Risk level:", risk_level)
+print("Needs urgent review:", needs_urgent_review)
+
+if needs_urgent_review:
+    print("Patient needs urgent review!")
