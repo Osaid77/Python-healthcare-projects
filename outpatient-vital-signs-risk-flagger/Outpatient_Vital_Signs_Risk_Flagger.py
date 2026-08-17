@@ -60,7 +60,7 @@ if age >= 60:
 if temp >= 38:
     risk_score += 1
 
-if oxygen_sat < 90:
+if oxygen_sat < 94:
     risk_score += 1
 
 if heart_rate >= 90:
@@ -99,7 +99,7 @@ print("Diabetes:", has_dm)
 if temp >= 38:
     print(f"Patient has fever with temperature of {temp}")
 
-if oxygen_sat < 90:
+if oxygen_sat < 94:
     print(f"Patient has hypoxemia with an oxygen level of {oxygen_sat}")
 
 if heart_rate >= 90:
