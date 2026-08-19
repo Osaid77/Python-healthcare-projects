@@ -23,8 +23,11 @@ outpatient and emergency triage & clinic intake screening
 - conditionals
 - loops
 - boolean logic
+- function design
+- parameter passing
+- return values
 - input validation
-- rule-based scoring
+- risk level scoring
 
 6. Example input/output:
 Patient aged 30 with high temperature of 38.5, low O2 saturation of < 94, normal heart rate of 78, has no diabetes,
