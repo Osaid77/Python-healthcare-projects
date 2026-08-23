@@ -1,0 +1,74 @@
+Valid
+Valid
+Valid
+['Invalid age', 'Invalid temperature', 'Invalid oxygen saturation', 'Invalid heart rate']
+Valid
+
+0
+1
+1
+0
+5
+
+Low risk
+Low risk
+Low risk
+Low risk
+High risk
+
+[]
+['Temperature risk factor']
+['Oxygen saturation risk factor']
+['Invalid age', 'Invalid temperature', 'Invalid oxygen saturation', 'Invalid heart rate']
+['Age risk factor', 'Temperature risk factor', 'Oxygen saturation risk factor', 'heart rate risk factor', 'Diabetes risk factor']
+
+-----Patient Report-----
+Patient name: Karim
+Patient age: 30
+Temperature: 37
+Oxygen saturation: 99
+Heart rate: 70
+Has diabetes: False
+Risk score: 0
+Risk classification: Low risk
+Risk factors: []
+
+-----Patient Report-----
+Patient name: Sid
+Patient age: 40
+Temperature: 38.5
+Oxygen saturation: 97
+Heart rate: 80
+Has diabetes: False
+Risk score: 1
+Risk classification: Low risk
+Risk factors: ['Temperature risk factor']
+
+-----Patient Report-----
+Patient name: Osaid
+Patient age: 22
+Temperature: 37
+Oxygen saturation: 89
+Heart rate: 77
+Has diabetes: False
+Risk score: 1
+Risk classification: Low risk
+Risk factors: ['Oxygen saturation risk factor']
+
+-----Invalid Patient-----
+['Invalid age', 'Invalid temperature', 'Invalid oxygen saturation', 'Invalid heart rate']
+
+-----Patient Report-----
+Patient name: Ahmad
+Patient age: 67
+Temperature: 38
+Oxygen saturation: 65
+Heart rate: 120
+Has diabetes: True
+Risk score: 5
+Risk classification: High risk
+Risk factors: ['Age risk factor', 'Temperature risk factor', 'Oxygen saturation risk factor', 'heart rate risk factor', 'Diabetes risk factor']
+
+{'total_patients': 5, 'valid_patients': 4, 'invalid_patients': 1, 'high_risk': 1, 'moderate_risk': 0, 'low_risk': 3}
+
+Risk factors detected: {'High heart rate', 'Elderly age', 'Low oxygen saturation', 'High temperature', 'Diagnosed with diabetes'}
