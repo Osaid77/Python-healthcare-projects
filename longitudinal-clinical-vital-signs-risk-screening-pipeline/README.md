@@ -99,3 +99,30 @@ Longitudinal_Clinical_Vital-Signs_Risk_Screening_Pipeline/
 ├── screening_results.csv
 ├── screening_summary.json
 └── README.md
+
+
+
+## Project Workflow
+
+risk_config.json
+        ↓
+Load validation ranges and clinical thresholds
+        ↓
+patients_data.csv
+        ↓
+Read observation
+        ↓
+Convert data types
+        ↓
+Validate vital signs
+        ↓
+If valid:
+    calculate clinical flags
+    calculate risk score
+    classify risk level
+        ↓
+Write observation to screening_results.csv
+        ↓
+Track dataset statistics
+        ↓
+Generate screening_summary.json
