@@ -99,7 +99,7 @@ Longitudinal_Clinical_Vital-Signs_Risk_Screening_Pipeline/
 ├── screening_results.csv
 ├── screening_summary.json
 └── README.md
-
+```
 
 
 ## Project Workflow
@@ -126,3 +126,60 @@ Write observation to screening_results.csv
 Track dataset statistics
         ↓
 Generate screening_summary.json
+
+
+## Python Concepts Demonstrated
+
+This project applies:
+
+- functions
+- loops
+- conditionals
+- dictionaries
+- sets
+- CSV processing
+- JSON processing
+- type conversion
+- counters
+- Boolean logic
+- file handling
+- data validation
+
+
+## Skills Demonstrated
+
+The project demonstrates practical foundations relevant to healthcare AI and software engineering:
+
+- structured healthcare data processing
+- reusable Python functions
+- separation of configuration from logic
+- rule-based clinical screening
+- longitudinal data handling
+- data-quality validation
+- structured result generation
+- reproducible processing pipelines
+
+## Limitations
+- the risk score is rule-based rather than statistically learned
+- the thresholds are not a validated clinical deterioration score
+- missing-value handling is currently limited
+- the project does not yet use Pandas, NumPy, or machine learning
+- repeated observations are screened independently rather than modeled as a full time series
+
+## Planned Improvements
+
+Future versions may include:
+- exception handling
+- modular Python files
+- Pandas-based preprocessing
+- missing-data handling
+- exploratory data analysis
+- visualization
+- feature engineering
+- machine-learning risk prediction
+- comparison between rule-based and ML-based screening
+
+## Purpose
+
+This project was built as part of a progression from Python fundamentals toward healthcare AI, machine learning, NLP, and clinical software engineering.
+It demonstrates the transition from single-patient interactive scripts to structured processing of real-world longitudinal healthcare data.
