@@ -1,0 +1,15 @@
+{
+    "dataset": {
+        "total_observations": 1000,
+        "valid_observations": 792,
+        "invalid_observations": 208
+    },
+    "risk_distribution": {
+        "low": 400,
+        "moderate": 382,
+        "high": 10
+    },
+    "admissions": {
+        "admissions_with_high_risk_observations": 8
+    }
+}

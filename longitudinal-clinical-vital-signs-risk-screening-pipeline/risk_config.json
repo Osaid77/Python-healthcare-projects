@@ -1,0 +1,22 @@
+{
+    "thresholds": {
+        "fever": 38.0,
+        "low_oxygen": 95,
+        "high_heart_rate": 120,
+        "high_respiratory_rate": 22,
+        "low_systolic_bp": 100,
+        "older_age": 65
+    },
+    "valid_ranges": {
+        "temperature_min": 33.0,
+        "temperature_max": 43.0,
+        "oxygen_min": 50,
+        "oxygen_max": 100,
+        "heart_rate_min": 20,
+        "heart_rate_max": 250,
+        "respiratory_rate_min": 5,
+        "respiratory_rate_max": 80,
+        "systolic_bp_min": 40,
+        "systolic_bp_max": 250
+    }
+}
