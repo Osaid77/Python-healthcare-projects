@@ -21,8 +21,9 @@ This is an educational healthcare screening prototype and is not intended to rep
 
 ## Dataset
 
-The project uses a public hospital vital-sign dataset containing repeated measurements across admissions.
+This project uses the **Patient Vital Signs and Event Tracking** dataset available on Kaggle:
 
+[Patient Vital Signs and Event Tracking — Kaggle](https://www.kaggle.com/datasets/parmajha/patient-vital-signs-and-event-tracking)
 Key variables used:
 
 - `hadm_id` — hospital admission identifier
@@ -36,6 +37,17 @@ Key variables used:
 - `charttime` — observation timestamp
 
 The dataset contains repeated observations for the same hospital admission, allowing the pipeline to evaluate vital-sign changes over time.
+
+The full dataset is not redistributed in this repository.  
+To reproduce the project:
+
+1. Download the dataset from Kaggle.
+2. Place the CSV file in the project directory.
+3. Rename it to:
+
+```text
+patients_data.csv
+```
 
 ## Features
 
