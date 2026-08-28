@@ -1,0 +1,24 @@
+hadm_id,charttime,age,sex,HR,RR,SBP,TEMP,SPO2,valid_data,fever,low_oxygen,high_heart_rate,high_respiratory_rate,low_systolic_bp,risk_score,risk_level
+0,2017-06-04 17:54:37,86,F,49.56,15.3,4.51,36.54,93.18,False,False,False,False,False,False,0,Invalid
+0,2017-06-04 20:36:07,86,F,60.23,19.7,68.83,36.39,97.05,True,False,False,False,False,True,2,Moderate risk
+0,2017-06-06 07:17:53,86,F,61.28,11.91,17.94,36.55,101.31,False,False,False,False,False,False,0,Invalid
+0,2017-06-08 22:46:17,86,F,59.33,17.63,129.35,36.31,94.47,True,False,True,False,False,False,2,Moderate risk
+0,2017-06-11 00:22:41,86,F,63.25,16.98,93.09,35.54,92.23,True,False,True,False,False,True,3,Moderate risk
+0,2017-06-28 17:19:05,86,F,60.85,17.18,119.35,37.6,97.4,True,False,False,False,False,False,1,Low risk
+0,2017-06-29 00:28:09,86,F,53.98,12.06,126.42,35.88,88.54,True,False,True,False,False,False,2,Moderate risk
+0,2017-07-25 18:55:05,86,F,58.64,21.84,61.45,37.22,99.64,True,False,False,False,False,True,2,Moderate risk
+
+
+
+
+
+
+
+Total ovservations: 1000
+Valid observations: 792
+Invalid observations: 208
+High risk: 10
+Moderate risk: 382
+Low risk: 400
+Admissions who had high risk: {'3', '2', '4', '5', '28', '26', '11', '0'}
+Number of admissions with high risk: 8
