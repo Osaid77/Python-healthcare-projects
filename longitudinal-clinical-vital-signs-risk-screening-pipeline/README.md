@@ -16,6 +16,7 @@ The pipeline:
 - tracks admissions that contain at least one high-risk observation
 - exports row-level screening results to CSV
 - generates an aggregate JSON summary
+- Handles all types of errors such as FileNotFound, KeyError, ValueError, and jsonDecodeError
 
 This is an educational healthcare screening prototype and is not intended to represent a validated clinical deterioration score or medical device.
 
@@ -126,6 +127,8 @@ Read observation
         ↓
 Convert data types
         ↓
+Handle errors if they exist
+        ↓
 Validate vital signs
         ↓
 If valid:
@@ -170,18 +173,17 @@ The project demonstrates practical foundations relevant to healthcare AI and sof
 - data-quality validation
 - structured result generation
 - reproducible processing pipelines
+- Error handling
 
 ## Limitations
 - the risk score is rule-based rather than statistically learned
 - the thresholds are not a validated clinical deterioration score
-- missing-value handling is currently limited
 - the project does not yet use Pandas, NumPy, or machine learning
 - repeated observations are screened independently rather than modeled as a full time series
 
 ## Planned Improvements
 
 Future versions may include:
-- exception handling
 - modular Python files
 - Pandas-based preprocessing
 - missing-data handling
