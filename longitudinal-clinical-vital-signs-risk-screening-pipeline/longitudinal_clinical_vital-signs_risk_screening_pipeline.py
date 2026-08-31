@@ -21,7 +21,7 @@ def load_config():
 config = load_config()
 try:
 
-    # Thresholds
+# Thresholds
     fever_threshold = config["thresholds"]["fever"]
     low_oxygen_threshold = config["thresholds"]["low_oxygen"]
     high_heart_rate_threshold = config["thresholds"]["high_heart_rate"]
@@ -41,7 +41,7 @@ try:
     min_systolic_bp = config["valid_ranges"]["systolic_bp_min"]
     max_systolic_bp = config["valid_ranges"]["systolic_bp_max"]
 
-except KeyError as error:       # It lets you see which key caused the error.
+except KeyError as error:     
     print("Key doesn't exist!", error)
     raise
 
@@ -270,7 +270,7 @@ print("Number of admissions with high risk:", len(high_risk_admissions))
 
 
 
-# Making a screening_summary json
+# Dumping a screening_summary json
 summary = {
     'dataset': {
         "total_observations": total_observations,
