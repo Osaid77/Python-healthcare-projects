@@ -11,16 +11,17 @@ def load_config():
 
     except json.JSONDecodeError:
         print("Invalid json file configuration!")
-        raise    # So it stops the program immediately because this is a serious proced
+        raise    
 
     except FileNotFoundError:
         print("File not found!")
         raise
 
 
-# Thresholds
 config = load_config()
 try:
+
+    # Thresholds
     fever_threshold = config["thresholds"]["fever"]
     low_oxygen_threshold = config["thresholds"]["low_oxygen"]
     high_heart_rate_threshold = config["thresholds"]["high_heart_rate"]
