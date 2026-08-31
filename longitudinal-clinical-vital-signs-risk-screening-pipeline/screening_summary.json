@@ -2,7 +2,9 @@
     "dataset": {
         "total_observations": 1000,
         "valid_observations": 792,
-        "invalid_observations": 208
+        "invalid_observations": 208,
+        "Malformed observations:": 0
+
     },
     "risk_distribution": {
         "low": 400,
