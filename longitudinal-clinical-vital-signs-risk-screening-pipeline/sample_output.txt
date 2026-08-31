@@ -17,6 +17,7 @@ hadm_id,charttime,age,sex,HR,RR,SBP,TEMP,SPO2,valid_data,fever,low_oxygen,high_h
 Total ovservations: 1000
 Valid observations: 792
 Invalid observations: 208
+Malformed observations: 0
 High risk: 10
 Moderate risk: 382
 Low risk: 400
