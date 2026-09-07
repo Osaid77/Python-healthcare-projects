@@ -106,7 +106,10 @@ This prevents physiologically impossible measurements from being interpreted as 
 ```text
 Longitudinal_Clinical_Vital-Signs_Risk_Screening_Pipeline/
 │
-├── Longitudinal_Clinical_Vital-Signs_Risk_Screening_Pipeline.py
+├── main.py
+├── configurator.py
+├── validation.py
+├── risk.py
 ├── patients_data.csv
 ├── risk_config.json
 ├── screening_results.csv
@@ -155,10 +158,12 @@ This project applies:
 - CSV processing
 - JSON processing
 - type conversion
-- counters
+- counters/accumulators
 - Boolean logic
 - file handling
 - data validation
+- exceptions
+- modules
 
 
 ## Skills Demonstrated
@@ -184,9 +189,7 @@ The project demonstrates practical foundations relevant to healthcare AI and sof
 ## Planned Improvements
 
 Future versions may include:
-- modular Python files
 - Pandas-based preprocessing
-- missing-data handling
 - exploratory data analysis
 - visualization
 - feature engineering
