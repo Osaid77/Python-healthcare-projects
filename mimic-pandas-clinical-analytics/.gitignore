@@ -1,0 +1,15 @@
+# Python-generated files
+__pycache__/
+*.pyc
+
+# Virtual environments
+.venv/
+venv/
+
+# Operating system files
+.DS_Store
+
+# Raw input datasets
+data/ed/
+data/hosp/
+data/icu/
