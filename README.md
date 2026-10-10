@@ -10,4 +10,7 @@ A Python healthcare screening prototype that validates outpatient vital signs an
 [View project](./outpatient-vital-signs-risk-flagger)
 
 ### 2. Multi-Patient Clinical Triage & Risk Summary System
-One-sentence summary: A Python healthcare screening prototype that validates multiple patient records, calculates individual risk scores, identifies clinical risk factors, classifies patients by risk level, and produces clinic-level summary analytics. [View project](./multi-patient-clinical-triage-and-risk-summary-system)
+A Python healthcare screening prototype that validates multiple patient records, calculates individual risk scores, identifies clinical risk factors, classifies patients by risk level, and produces clinic-level summary analytics. [View project](./multi-patient-clinical-triage-and-risk-summary-system)
+
+### 3. Longitudinal Clinical Vital-Signs Risk Screening Pipeline
+A Python healthcare data-processing project that screens repeated hospital vital-sign observations, validates physiologic measurements, calculates configurable rule-based risk scores, and exports structured CSV and JSON results. [View project](./)
