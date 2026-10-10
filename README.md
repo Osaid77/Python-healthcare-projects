@@ -16,5 +16,5 @@ A Python healthcare screening prototype that validates multiple patient records,
 A Python healthcare data-processing project that screens repeated hospital vital-sign observations, validates physiologic measurements, calculates configurable rule-based risk scores, and exports structured CSV and JSON results. [View project](./longitudinal-clinical-vital-signs-risk-screening-pipeline)
 
 ### 4. mimic-pandas-clinical-analytics
-Using the MIMIC-IV and MIMIC-IV-ED demonstration datasets, the project processes emergency department encounters, clinical vital signs, diagnoses, patient demographics, and hospital admission records.
-The primary objective is to demonstrate comprehensive Pandas data manipulation and analytical skills, rather than train predictive models or develop a clinical decision-support system.
+Using the MIMIC-IV and MIMIC-IV-ED datasets, the project processes emergency department encounters, clinical vital signs, diagnoses, patient demographics, and hospital admission records.
+The primary objective is to demonstrate comprehensive Pandas data manipulation and analytical skills, rather than train predictive models or develop a clinical decision-support system. [View project](./mimic-pandas-clinical-analytics)
